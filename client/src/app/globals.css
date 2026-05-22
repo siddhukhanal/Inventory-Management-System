@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app{
+  height:100%;
+  width: 100%;
+  @apply text-sm;
+  @apply bg-gray-500;
+  @apply text-gray-900;
+  
+}
+
+@theme {
+  /* 1. Define your base theme colors (Light Mode defaults) */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  --color-white: #ffffff;
+
+  /* 2. Map the custom gradient background from his config */
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
+
+/* 3. This automatically inverts the variables when dark mode is active */
+@utility dark {
+  --color-gray-50: #111827; 
+  --color-gray-100: #1f2937; 
+  --color-gray-200: #374151;
+  --color-gray-300: #4b5563; 
+  --color-gray-500: #9ca3af;
+  --color-gray-600: #d1d5db;
+  --color-gray-700: #e5e7eb;
+  --color-gray-800: #f3f4f6;
+  --color-gray-900: #f9fafb; 
+
+  --color-blue-50: #1e3a8a;  
+  --color-blue-100: #172554;
+  --color-blue-900: #eff6ff;
+
+
+  --color-white: #030712;
+  --color-black: #f9fafb;
+}
