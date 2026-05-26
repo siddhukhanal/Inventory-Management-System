@@ -11,6 +11,7 @@ import morgan from "morgan"
 import dashboardRoutes from "./routes/dashboardRoutes"
 import productRoutes from "./routes/productsRoutes"
 import userRoutes from "./routes/userRoutes"
+import expenseRoutes from "./routes/expenseRoutes"
 
 
 // Configuration
@@ -24,9 +25,10 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 
 //Routes
-app.use("/dashboard",dashboardRoutes);
-app.use("/products",productRoutes);
-app.use("/users",userRoutes)
+app.use("/dashboard",dashboardRoutes);//  http://localhost:800/dashboard
+app.use("/products",productRoutes);//  http://localhost:800/products
+app.use("/users",userRoutes)//  http://localhost:800/users
+app.use("/expenses",expenseRoutes)//  http://localhost:800/expenses
 
 
 //Servers
